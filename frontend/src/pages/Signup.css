@@ -1,0 +1,114 @@
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(#f5f7fa, #c3cfe2);
+}
+
+.signup-box {
+  background: white;
+  padding: 3rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-box h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.signup-box p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.role-selection {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.role-option {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-option:hover {
+  border-color: #11998e;
+  background: #f0fdf9;
+}
+
+.role-option input[type="radio"] {
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+  width: auto;
+  cursor: pointer;
+}
+
+.role-option input[type="radio"]:checked + .role-label {
+  color: #11998e;
+}
+
+.role-option:has(input:checked) {
+  border-color: #11998e;
+  background: #f0fdf9;
+}
+
+.role-label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex: 1;
+}
+
+.role-label strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.role-label small {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.signup-box input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-box button:hover {
+  opacity: 0.9;
+}
+
+.login-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #11998e;
+  text-decoration: none;
+}

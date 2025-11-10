@@ -1,0 +1,176 @@
+/* Registrations.css */
+
+.registrations-page {
+  padding: 100px 8rem 3rem 8rem;
+  background: linear-gradient(#f5f7fa, #e3f2fd);
+  min-height: 100vh;
+}
+
+.registrations-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.registrations-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.registrations-nav h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #0d47a1;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.empty-subtitle {
+  font-size: 1rem !important;
+  color: #999 !important;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event-group {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.event-header {
+  padding: 1.5rem 2rem;
+  background: linear-gradient(to right, #1976d2, #42a5f5);
+  color: white;
+}
+
+.event-header h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5rem;
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+.paid-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.count-badge {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.registrations-table {
+  padding: 0;
+  overflow-x: auto;
+}
+
+.registrations-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.registrations-table thead {
+  background: #f5f5f5;
+}
+
+.registrations-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.registrations-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.registrations-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.registrations-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .registrations-page {
+    padding: 6rem 1.5rem 2rem 1.5rem;
+  }
+
+  .registrations-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .registrations-nav h2 {
+    font-size: 1.5rem;
+  }
+
+  .event-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .event-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .event-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .registrations-table {
+    font-size: 0.85rem;
+  }
+
+  .registrations-table th,
+  .registrations-table td {
+    padding: 0.75rem 1rem;
+  }
+}

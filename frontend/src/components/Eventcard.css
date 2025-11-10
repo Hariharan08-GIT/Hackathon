@@ -1,0 +1,134 @@
+.food {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 8rem;
+  background: linear-gradient(to right,#f3f7ec,#eaf9ef);
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.bold-dark {
+  color: #1f2937;
+}
+
+.bold-green {
+  background: linear-gradient(30deg,red, blue );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.hero-content p {
+  color: #4b5563;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+
+.btn-outline {
+  background: white;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: red;
+  color: red;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .food {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero-content {
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+  }
+}

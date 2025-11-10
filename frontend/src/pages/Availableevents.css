@@ -1,0 +1,106 @@
+/* 🌟 Availableevents.css */
+
+.available-events-page {
+  padding: 100px 8rem 3rem 8rem; /* Added top padding for navbar */
+  background: linear-gradient(#f5f7fa, #e3f2fd); /* soft blue gradient */
+  min-height: 100vh;
+}
+
+/* ---------- NAV ---------- */
+.events-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.events-nav h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+.events-nav .back-home {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.events-nav .back-home:hover {
+  color: #0d47a1;
+}
+
+/* ---------- GRID ---------- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* ---------- CARD ---------- */
+.events-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.events-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- TEXT STYLES ---------- */
+.events-card h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.events-card p {
+  color: #555;
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
+
+/* ---------- BADGES / HIGHLIGHTS ---------- */
+.time-left {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+.seats {
+  color: #16a085;
+  font-weight: 600;
+}
+
+/* ---------- BUTTON ---------- */
+.join-btn {
+  margin-top: 1rem;
+  background: linear-gradient(to right, #1976d2, #42a5f5);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.join-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .available-events-page {
+    padding: 2rem;
+  }
+
+  .events-nav h2 {
+    font-size: 1.6rem;
+  }
+}

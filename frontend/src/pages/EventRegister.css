@@ -1,0 +1,163 @@
+/* EventRegister.css */
+
+.event-register-page {
+  padding: 100px 2rem 3rem 2rem; /* top padding for fixed navbar */
+  background: linear-gradient(to right, #f5f7fa, #e3f2fd);
+  min-height: 100vh;
+}
+
+.register-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-to-events {
+  display: inline-block;
+  padding: 8px 14px;
+  background: white;
+  color: #1f2937;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.back-to-events:hover {
+  background: #f3f4f6;
+  border-color: red;
+  color: red;
+  transform: translateY(-2px);
+}
+
+.register-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 1rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-header {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.register-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(30deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.register-price {
+  color: #111827;
+  font-weight: 700;
+}
+
+.register-description {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-top: 0.25rem;
+}
+
+.register-form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.form-row label {
+  display: block;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  background: #f9fafb;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  border-color: red;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+.register-actions {
+  margin-top: 0.5rem;
+}
+
+.register-btn {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.register-btn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.25);
+}
+
+/* Pay button (for paid events) */
+.pay-btn {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  background: linear-gradient(to right, #1976d2, #42a5f5);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-left: 0.75rem;
+}
+
+.pay-btn:hover {
+  background: linear-gradient(to right, #155a9c, #2b85c8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(21, 90, 156, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-register-page {
+    padding: 100px 1rem 2rem 1rem;
+  }
+
+  .register-card {
+    padding: 1.25rem;
+  }
+}

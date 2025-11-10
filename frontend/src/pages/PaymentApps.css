@@ -1,0 +1,117 @@
+.payment-apps-page {
+  padding: 100px 2rem 3rem 2rem; /* top padding for navbar */
+  min-height: 100vh;
+  background: linear-gradient(#f5f7fa, #e3f2fd);
+}
+
+.payment-apps-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  padding: 8px 14px;
+  background: white;
+  color: #1f2937;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.back-link:hover {
+  background: #f3f4f6;
+  border-color: red;
+  color: red;
+}
+
+.payment-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(30deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.payment-subtitle {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  text-decoration: none;
+  color: #1f2937;
+  transition: all 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--app-color, #1976d2);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.app-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 800;
+}
+
+.app-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.app-info p {
+  margin: 2px 0 0 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.payment-footer {
+  margin-top: 1.5rem;
+}
+
+.finish-btn {
+  padding: 0.85rem 1.5rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.finish-btn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .payment-apps-page {
+    padding: 100px 1rem 2rem 1rem;
+  }
+}
