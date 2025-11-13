@@ -71,7 +71,7 @@ const ReminderCenter = () => {
     const token = localStorage.getItem("token");
     if (!token) return;
     try {
-      const res = await axios.get("http://localhost:5000/api/events", {
+      const res = await axios.get("/api/events", {
         headers: { Authorization: `Bearer ${token}` },
       });
       scheduleForEvents(res.data || []);

@@ -107,18 +107,14 @@ const CreateEvent = () => {
 
     try {
       if (isEdit) {
-        await axios.put(
-          `http://localhost:5000/api/events/${eventToEdit._id}`,
-          payload,
-          { headers }
-        );
+        await axios.put(`/api/events/${eventToEdit._id}`, payload, { headers });
         toast.success("✅ Event successfully updated!", {
           position: "top-center",
           autoClose: 1500,
           hideProgressBar: false,
         });
       } else {
-        await axios.post("http://localhost:5000/api/events", payload, {
+        await axios.post("/api/events", payload, {
           headers,
         });
         toast.success("✅ Event successfully created!", {

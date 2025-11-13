@@ -33,12 +33,9 @@ export default function Availableevents() {
 
       try {
         // Fetch all events with ?all=true query parameter
-        const response = await axios.get(
-          "http://localhost:5000/api/events?all=true",
-          {
-            headers: token ? { Authorization: `Bearer ${token}` } : {},
-          }
-        );
+        const response = await axios.get("/api/events?all=true", {
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        });
         if (isMounted) {
           setEvents(response.data);
         }

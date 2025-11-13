@@ -24,12 +24,9 @@ export default function EventRegister() {
       setLoading(true);
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(
-          "http://localhost:5000/api/events?all=true",
-          {
-            headers: token ? { Authorization: `Bearer ${token}` } : {},
-          }
-        );
+        const res = await axios.get("/api/events?all=true", {
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        });
         if (!isMounted) return;
         const found = res.data.find((e) => e._id === id);
         if (found) setEvent(found);
@@ -57,7 +54,7 @@ export default function EventRegister() {
 
     try {
       // Save registration to backend
-      await axios.post("http://localhost:5000/api/registrations", {
+      await axios.post("/api/registrations", {
         eventId: id,
         name: form.name,
         email: form.email,

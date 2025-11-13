@@ -51,7 +51,7 @@ const EventsPage = () => {
 
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/events", {
+        const response = await axios.get("/api/events", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (isMounted) {
@@ -106,7 +106,7 @@ const EventsPage = () => {
 
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:5000/api/events/${eventId}`, {
+      await axios.delete(`/api/events/${eventId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEvents((prev) => prev.filter((event) => event._id !== eventId));

@@ -25,12 +25,9 @@ const UserEvents = ({ events, setEvents }) => {
     if (!pendingDeleteId) return;
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(
-        `http://localhost:5000/api/events/${pendingDeleteId}`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      await axios.delete(`/api/events/${pendingDeleteId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setEvents((prev) =>
         prev.filter((event) => event._id !== pendingDeleteId)
       );
@@ -53,11 +50,9 @@ const UserEvents = ({ events, setEvents }) => {
     const payload = { ...editingEvent, ...partialUpdate };
 
     try {
-      const res = await axios.put(
-        `http://localhost:5000/api/events/${editingEvent._id}`,
-        payload,
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+      const res = await axios.put(`/api/events/${editingEvent._id}`, payload, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setEvents((prev) =>
         prev.map((e) => (e._id === editingEvent._id ? res.data : e))
       );

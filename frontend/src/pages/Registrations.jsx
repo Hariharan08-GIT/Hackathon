@@ -24,12 +24,9 @@ export default function Registrations() {
       }
 
       try {
-        const response = await axios.get(
-          "http://localhost:5000/api/registrations/my-events",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
+        const response = await axios.get("/api/registrations/my-events", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
         if (isMounted) {
           setRegistrations(response.data);
         }

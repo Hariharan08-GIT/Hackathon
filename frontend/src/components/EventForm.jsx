@@ -58,7 +58,7 @@ const EventForm = ({
     if (editingEventId) {
       try {
         const { data } = await axios.put(
-          `http://localhost:5000/api/events/${editingEventId}`,
+          `/api/events/${editingEventId}`,
           payload,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -71,11 +71,9 @@ const EventForm = ({
       }
     } else {
       try {
-        const { data } = await axios.post(
-          "http://localhost:5000/api/events",
-          payload,
-          { headers: { Authorization: `Bearer ${token}` } }
-        );
+        const { data } = await axios.post("/api/events", payload, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
         setEvents([...events, data]);
         handleSuccess("Event successfully created.");
         setError("");
