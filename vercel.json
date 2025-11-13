@@ -1,14 +1,8 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "frontend/package.json",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "frontend/dist"
-            }
-        }
-    ],
+    "buildCommand": "npm run build",
+    "outputDirectory": "frontend/dist",
+    "installCommand": "npm install",
     "routes": [
         {
             "src": "/api/auth/(.*)",
@@ -27,7 +21,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/frontend/index.html"
+            "dest": "/index.html"
         }
     ]
 }
