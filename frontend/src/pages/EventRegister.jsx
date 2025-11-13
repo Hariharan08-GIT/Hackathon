@@ -159,7 +159,7 @@ export default function EventRegister() {
                           navigate(`/events/${id}/pay`, {
                             state: {
                               event,
-                              tickets: Number(form.tickets) || 0,
+                              tickets: Number(form.tickets),
                             },
                           })
                         }
