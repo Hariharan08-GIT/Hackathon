@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const Registration = require("../backend/models/Registration");
-const Event = require("../backend/models/Event");
+const Registration = require("../models/Registration");
+const Event = require("../models/Event");
 const jwt = require("jsonwebtoken");
 
 // MongoDB Connection with caching
